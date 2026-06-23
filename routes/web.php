@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ClassroomController;
-use App\Http\Controllers\AvailabilityController;
+
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminClassroomController;
 use App\Http\Controllers\AdminDashboardController;
@@ -24,7 +24,7 @@ Route::get('/api/classrooms', [ClassroomController::class, 'index'])->name('api.
 Route::middleware('auth')->group(function () {
     Route::get('/classrooms', [ClassroomController::class, 'index'])->name('classrooms.index');
     Route::get('/classrooms/{classroom}', [ClassroomController::class, 'show'])->name('classrooms.show');
-    Route::get('/search', [ClassroomController::class, 'index'])->name('availability.search');
+
     Route::post('/book', [BookingController::class, 'store'])->name('bookings.store');
     
     Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
