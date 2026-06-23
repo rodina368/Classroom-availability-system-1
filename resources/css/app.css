@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-gradient-accent {
+        @apply bg-gradient-to-br from-[#7B3FE4] to-[#A78BFA];
+    }
+}
